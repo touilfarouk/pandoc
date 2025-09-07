@@ -1,0 +1,490 @@
+ /* @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/SourceSansPro-Regular.woff2') format('woff2'),
+         url('fonts/SourceSansPro-Regular.ttf') format('truetype');
+} 
+  */
+/* @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/SourceSansPro-Regular.woff2') format('woff2'),
+         url('fonts/SourceSansPro-Regular.ttf') format('truetype');
+} */
+ 
+/* body {
+    font-family: 'Source Sans Pro', monospace;
+    column-count: 2; 
+    column-gap: 2rem;
+    line-height: 1.6;
+} */
+
+/* Embed custom font if available */
+@font-face {
+    font-family: 'JetBrains Regular Mono';
+    src: url('fonts/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+         url('fonts/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Embed JetBrains Mono font (self-hosted) */
+@font-face {
+    font-family: 'JetBrains Regular';
+     src: url('fonts/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2'),
+         url('fonts/fonts/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/fonts/webfonts/JetBrainsMono-Bold.woff2') format('woff2'),
+         url('fonts/fonts/ttf/JetBrainsMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+      src: url('fonts/fonts/webfonts/JetBrainsMono-Italic.woff2') format('woff2'),
+         url('fonts/fonts/ttf/JetBrainsMono-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Base styles */
+body {
+    font-family: "JetBrains Regular", "Fira Code", "Source Code Pro", "Roboto Mono", monospace;
+    line-height: 1.7;
+    margin: 2em;
+    background: #fafafa;
+    color: #2d3748;
+    column-count: 2; /* Two-column layout */
+    column-gap: 2rem;
+}
+
+
+
+
+
+
+/* Enhanced Headers */
+h1, h2, h3, h4 {
+    font-family:  "JetBrains Mono", sans-serif;
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+}
+
+h1 { 
+    color: #e53e3e; 
+    font-size: 2.5em;
+    border-bottom: 3px solid #e53e3e;
+    padding-bottom: 0.3em;
+}
+
+h2 { 
+    color: #dd6b20; 
+    font-size: 2em;
+}
+
+h3 { 
+    color: #d69e2e; 
+    font-size: 1.5em;
+}
+
+h4 { 
+    color: #38a169; 
+    font-size: 1.2em;
+}
+
+/* Enhanced Code blocks */
+pre {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: #f7fafc;
+    padding: 1.5em;
+    border-radius: 12px;
+    overflow-x: auto;
+    font-size: 0.95em;
+    font-family: "JetBrains Regular Mono", "Cascadia Code", "Consolas", monospace;
+    line-height: 1.5;
+    border: 1px solid #4a5568;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin: 1.5em 0;
+}
+
+pre::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+    border-radius: 12px 12px 0 0;
+}
+
+/* Inline code with coding fonts */
+code {
+    background: linear-gradient(135deg, #4a5568, #2d3748);
+    color: #ffd700;
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-family: "JetBrains Regular Mono", "Fira Code", "Source Code Pro", "Roboto Mono", monospace;
+    font-size: 0.9em;
+    border: 1px solid #718096;
+    font-feature-settings: "liga" 1, "calt" 1; /* Enable font ligatures */
+    font-weight: 500;
+}
+
+/* PANDOC SYNTAX HIGHLIGHTING CLASSES */
+
+/* Keywords - Bright Blue */
+.sourceCode .kw, code span.kw { 
+    color: #82aaff !important;
+    font-weight: bold;
+}
+
+/* Data Types - Cyan */
+.sourceCode .dt, code span.dt { 
+    color: #4dd0e1 !important;
+    font-weight: 600;
+}
+
+/* Decimal/Numbers - Orange */
+.sourceCode .dv, .sourceCode .bn, .sourceCode .fl, 
+code span.dv, code span.bn, code span.fl { 
+    color: #ffcb6b !important;
+    font-weight: 600;
+}
+
+/* Strings - Green */
+.sourceCode .st, code span.st { 
+    color: #c3e88d !important;
+}
+
+/* Comments - Gray Italic */
+.sourceCode .co, code span.co { 
+    color: #546e7a !important;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Functions - Purple */
+.sourceCode .fu, code span.fu { 
+    color: #c792ea !important;
+    font-weight: 600;
+}
+
+/* Variables - Light Blue */
+.sourceCode .va, code span.va { 
+    color: #89ddff !important;
+}
+
+/* Operators - Pink */
+.sourceCode .op, code span.op { 
+    color: #ff5370 !important;
+    font-weight: 600;
+}
+
+/* Built-ins - Yellow */
+.sourceCode .bu, code span.bu { 
+    color: #ffcb6b !important;
+    font-weight: 600;
+}
+
+/* Imports/Extensions - Magenta */
+.sourceCode .im, .sourceCode .ex, 
+code span.im, code span.ex { 
+    color: #f78c6c !important;
+}
+
+/* Control Flow - Bright Purple */
+.sourceCode .cf, code span.cf { 
+    color: #bb86fc !important;
+    font-weight: bold;
+}
+
+/* Attributes - Orange */
+.sourceCode .at, code span.at { 
+    color: #ffab91 !important;
+}
+
+/* Information - Cyan */
+.sourceCode .in, code span.in { 
+    color: #4dd0e1 !important;
+}
+
+/* Warnings - Yellow */
+.sourceCode .wa, code span.wa { 
+    color: #f1c40f !important;
+    font-weight: bold;
+}
+
+/* Errors - Red */
+.sourceCode .er, code span.er { 
+    color: #f44336 !important;
+    font-weight: bold;
+}
+
+/* Documentation - Green */
+.sourceCode .do, code span.do { 
+    color: #81c784 !important;
+    font-style: italic;
+}
+
+/* Other - Light Gray */
+.sourceCode .ot, code span.ot { 
+    color: #b0bec5 !important;
+}
+
+/* Alert - Red */
+.sourceCode .al, code span.al { 
+    color: #ff5722 !important;
+    font-weight: bold;
+}
+
+/* Preprocessor - Pink */
+.sourceCode .pp, code span.pp { 
+    color: #e91e63 !important;
+}
+
+/* Special Characters - Bright Pink */
+.sourceCode .sc, code span.sc { 
+    color: #ff4081 !important;
+}
+
+/* Special Strings - Bright Green */
+.sourceCode .ss, code span.ss { 
+    color: #69f0ae !important;
+}
+
+/* Verbatim Strings - Light Green */
+.sourceCode .vs, code span.vs { 
+    color: #a5d6a7 !important;
+}
+
+/* Annotation - Purple */
+.sourceCode .an, code span.an { 
+    color: #ab47bc !important;
+    font-style: italic;
+}
+
+/* Regular expressions - Bright Orange */
+.sourceCode .re, code span.re { 
+    color: #ff9500 !important;
+}
+
+/* Constants - Bright Cyan */
+.sourceCode .cn, code span.cn { 
+    color: #00e5ff !important;
+    font-weight: 600;
+}
+
+/* Ensure sourceCode has proper styling */
+.sourceCode, div.sourceCode {
+    background: transparent !important;
+    color: #f7fafc;
+}
+
+/* Override any default styling */
+pre.sourceCode, pre code.sourceCode {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%) !important;
+    color: #f7fafc !important;
+}
+
+/* Additional support for newer Pandoc versions */
+div.sourceCode > pre {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%) !important;
+}
+
+/* Reset inline code inside pre blocks */
+pre code {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    color: inherit !important;
+}
+
+/* Table of Contents */
+nav#TOC ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+nav#TOC ul ul {
+    padding-left: 1.5em;
+}
+
+nav#TOC li {
+    margin: 0.5em 0;
+}
+
+nav#TOC a {
+    color: #dd6b20;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav#TOC a:hover {
+    color: #e53e3e;
+    text-decoration: underline;
+}
+
+/* Enhanced dividers */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+    margin: 2em 0;
+    border-radius: 1px;
+}
+
+/* Two-column layout */
+.two-columns {
+    column-count: 2;
+    column-gap: 2em;
+    column-rule: 1px solid #e2e8f0;
+    text-align: justify;
+    margin: 1.5em 0;
+}
+
+.two-columns p {
+    margin-bottom: 1em;
+}
+
+/* Break column when needed */
+.column-break {
+    break-after: column;
+}
+
+/* Images styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 1em 0;
+}
+
+.image-container {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.image-container img {
+    margin-bottom: 0.5em;
+}
+
+.image-caption {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+/* Float images */
+.image-left {
+    float: left;
+    margin: 0 1.5em 1em 0;
+    max-width: 300px;
+}
+
+.image-right {
+    float: right;
+    margin: 0 0 1em 1.5em;
+    max-width: 300px;
+}
+
+/* Clear floats */
+.clear {
+    clear: both;
+}
+
+/* Text styling enhancements */
+.intro-text {
+    font-size: 1.1em;
+    color: #4a5568;
+    margin: 1.5em 0;
+    font-style: italic;
+    border-left: 4px solid #dd6b20;
+    padding-left: 1em;
+    background: rgba(221, 107, 32, 0.05);
+    padding: 1em 1em 1em 2em;
+    border-radius: 0 8px 8px 0;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #e6fffa 0%, #f0fff4 100%);
+    border: 1px solid #4dd0e1;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 1.5em 0;
+    box-shadow: 0 2px 8px rgba(77, 208, 225, 0.1);
+}
+
+.highlight-box h3 {
+    color: #0891b2;
+    margin-top: 0;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #38a169;
+    padding-left: 1.5em;
+    margin: 1.5em 0;
+    font-style: italic;
+    color: #2d3748;
+    background: rgba(56, 161, 105, 0.05);
+    padding: 1em 1em 1em 2em;
+    border-radius: 0 8px 8px 0;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+/* Lists styling */
+ul, ol {
+    padding-left: 1.5em;
+    margin: 1em 0;
+}
+
+li {
+    margin: 0.5em 0;
+    line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        margin: 1em;
+        font-size: 0.9em;
+    }
+    
+    pre {
+        padding: 1em;
+        font-size: 0.85em;
+    }
+    
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    
+    .two-columns {
+        column-count: 1;
+    }
+    
+    .image-left, .image-right {
+        float: none;
+        max-width: 100%;
+        margin: 1em 0;
+    }
+}
+
+
+/* Only h2 titles get orange */
+h2 {
+    color: orange !important;
+}
+

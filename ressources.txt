@@ -1,0 +1,96 @@
+    
+    <!--pandoc  book.html -o book.epub --css=style.css --css=default.min.css --css=bootstrap.min.css --metadata title="Guide Complet de Programmation Moderne" --metadata author="Ton Nom" --epub-cover-image=cover.jpg --resource-path=.:images -->
+
+        <!--pandoc for-test.html  -o book.epub --css=style.css --css=default.min.css --css=bootstrap.min.css --metadata title="Guide Complet de Programmation Moderne" --metadata author="Ton Nom" --epub-cover-image=cover.jpg --resource-path=.:images -->
+
+<!-- set d=%DATE%
+set yyyy=%d:~6,4%
+set mm=%d:~3,2%
+set dd=%d:~0,2%
+set today=%yyyy%-%mm%-%dd%
+
+pandoc book.html -o book.epub ^
+  --css=style.css ^
+  --css=default.min.css ^
+  --css=bootstrap.min.css ^
+  --metadata title="Guide Complet de Programmation Moderne" ^
+  --metadata author="Ton Nom" ^
+  --epub-cover-image=cover.jpg ^
+  --resource-path=.:images ^
+  --toc ^
+  --toc-depth=3 ^
+  --number-sections ^
+  --metadata date="%today%" ^
+  --metadata language=fr -->
+
+<!-- set d=%DATE%
+set yyyy=%d:~6,4%
+set mm=%d:~3,2%
+set dd=%d:~0,2%
+set today=%yyyy%-%mm%-%dd%
+
+pandoc for-test.html -o book.epub ^
+  --css=default.min.css ^
+  --css=bootstrap.min.css ^
+  --css=style.css ^
+  --metadata title="Guide Complet de Programmation Moderne" ^
+  --metadata author="Ton Nom" ^
+  --epub-cover-image=cover.jpg ^
+  --resource-path=.:images ^
+  --toc ^
+  --toc-depth=3 ^
+  --number-sections ^
+  --metadata date="%today%" ^
+  --metadata language=fr -->
+-------------------------------------------------------------------
+<style>
+    
+    /* Container like .row */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -0.5em;
+    }
+
+    /* Column like .col-md-6 */
+    .col-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 0 0.5em;
+      box-sizing: border-box;
+      text-align: justify;
+    }
+
+    /* On small screens, stack */
+    @media (max-width: 600px) {
+      .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+
+    <!-- <section epub:type="titlepage" class="titlepage">
+  <h1 class="title">Guide Complet de Programmation Moderne</h1>
+  <p class="author">Ton Nom</p>
+</section>
+
+<section>
+  <h2>Démo en deux colonnes (Bootstrap-like)</h2>
+
+  <div class="row">
+    <div class="col-6">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="col-6">
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+      <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+    </div>
+  </div>
+</section> -->

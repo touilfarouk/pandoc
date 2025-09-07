@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprendre Kotlin - Guide Complet de Programmation</title>
+    
+
+   
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+ 
+    <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="default.min.css">
+    <script src="highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+  
+  </style>
+<body>
+
+
+<h1>Guide Complet de Programmation Moderne</h1>
+
+
+
+
+<div class="image-container">
+    <img src="cover.jpg" alt="Programming workspace">
+    <div class="image-caption">Un environnement de développement moderne</div>
+</div>
+
+<hr>
+
+<h2>Introduction à la Programmation</h2>
+
+<div class="two-columns">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    
+    <div class="column-break"></div>
+    
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+    
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+</div>
+
+<img src="images/pc.jpg" alt="Code on screen" class="image-right">
+
+<p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+
+<p>Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+
+<div class="clear"></div>
+
+<div class="highlight-box">
+    <h3>💡 Conseil Important</h3>
+    <p>La programmation est un art qui se maîtrise par la pratique. N'hésitez pas à expérimenter avec les exemples de code présentés dans ce livre. Chaque ligne de code écrite vous rapproche de la maîtrise.</p>
+</div>
+
+<h2>Chapitre 1 – Introduction à Kotlin</h2>
+
+<img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=400&h=250&fit=crop" alt="Kotlin programming" class="image-left">
+
+<p>Kotlin est un langage de programmation moderne développé par JetBrains. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
+
+<p>Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque.</p>
+
+<div class="clear"></div>
+
+<pre><code class="language-kotlin">/**
+ * Exemple de classe Kotlin avec des fonctionnalités modernes
+ */
+data class Person(val name: String, val age: Int) {
+    
+    fun greet(): String {
+        return "Bonjour, je m'appelle $name et j'ai $age ans."
+    }
+    
+    fun isAdult(): Boolean = age >= 18
+    
+    companion object {
+        fun createChild(name: String): Person {
+            return Person(name, 0)
+        }
+    }
+}
+
+fun main() {
+    val person = Person("Alice", 25)
+    println(person.greet())
+    
+    val child = Person.createChild("Bob")
+    println("${child.name} est ${if (child.isAdult()) "adulte" else "mineur"}")
+}</code></pre>
+
+<blockquote>
+    <p>«La simplicité est la sophistication suprême.» - Leonardo da Vinci</p>
+</blockquote>
+
+<h2>Chapitre 2 – Développement Web avec PHP</h2>
+
+<div class="two-columns">
+    <p>PHP reste l'un des langages les plus populaires pour le développement web. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+    
+    <p>Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+    
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+</div>
+
+<div class="image-container">
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=300&fit=crop" alt="PHP development">
+    <div class="image-caption">Développement PHP moderne avec frameworks</div>
+</div>
+
+<pre><code class="language-php"><?php
+/**
+ * Exemple de classe PHP avec des concepts modernes
+ */
+class DatabaseManager {
+    private PDO $connection;
+    private string $host;
+    
+    public function __construct(string $host, string $dbname) {
+        $this->host = $host;
+        $dsn = "mysql:host={$host};dbname={$dbname};charset=utf8mb4";
+        $this->connection = new PDO($dsn, $username, $password, [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        ]);
+    }
+    
+    public function findUserById(int $id): ?array {
+        $stmt = $this->connection->prepare("SELECT * FROM users WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        
+        return $stmt->fetch() ?: null;
+    }
+}
+
+// Utilisation
+$db = new DatabaseManager('localhost', 'myapp');
+$user = $db->findUserById(123);
+
+if ($user) {
+    echo "Utilisateur trouvé : {$user['name']}";
+} else {
+    echo "Utilisateur non trouvé";
+}
+?></code></pre>
+
+<h2>Chapitre 3 – Bases de Données SQL</h2>
+
+<img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=400&h=300&fit=crop" alt="Database design" class="image-right">
+
+<p>Les bases de données relationnelles constituent le cœur de nombreuses applications. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Cras ultricies ligula sed magna dictum porta.</p>
+
+<p>Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+
+<div class="clear"></div>
+
+<pre><code class="language-sql">-- Création d'une base de données complète pour un blog
+CREATE DATABASE blog_app CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE blog_app;
+
+-- Table des utilisateurs
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Table des catégories
+CREATE TABLE categories (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    slug VARCHAR(100) UNIQUE NOT NULL
+);
+
+-- Table des articles
+CREATE TABLE articles (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    user_id INT NOT NULL,
+    category_id INT,
+    status ENUM('draft', 'published', 'archived') DEFAULT 'draft',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL,
+    INDEX idx_status_created (status, created_at)
+);
+
+-- Insertion de données d'exemple
+INSERT INTO users (username, email, password_hash) VALUES 
+('alice_dev', 'alice@example.com', '$2y$10$encrypted_password_here'),
+('bob_writer', 'bob@example.com', '$2y$10$encrypted_password_here');
+
+INSERT INTO categories (name, description, slug) VALUES
+('Programmation', 'Articles sur le développement logiciel', 'programmation'),
+('Design', 'Articles sur le design et UX/UI', 'design');
+
+-- Requête complexe avec jointures
+SELECT 
+    a.title,
+    a.created_at,
+    u.username as author,
+    c.name as category
+FROM articles a
+INNER JOIN users u ON a.user_id = u.id
+LEFT JOIN categories c ON a.category_id = c.id
+WHERE a.status = 'published'
+ORDER BY a.created_at DESC
+LIMIT 10;</code></pre>
+
+<h2>Chapitre 4 – Python pour l'Analyse de Données</h2>
+
+<div class="two-columns">
+    <p>Python est devenu incontournable dans le domaine de la data science. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+    
+    <p>Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Sed porttitor lectus nibh.</p>
+    
+    <p>Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+</div>
+
+<div class="image-container">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&h=400&fit=crop" alt="Data analysis">
+    <div class="image-caption">Analyse de données avec Python et ses bibliothèques</div>
+</div>
+
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+
+class DataAnalyzer:
+    """Classe pour analyser des données de vente."""
+    
+    def __init__(self, data_path: str):
+        """Initialise l'analyseur avec un fichier de données."""
+        self.data = pd.read_csv(data_path)
+        self.model = None
+        
+    def explore_data(self) -> dict:
+        """Explore les données et retourne des statistiques."""
+        stats = {
+            'shape': self.data.shape,
+            'columns': list(self.data.columns),
+            'missing_values': self.data.isnull().sum().to_dict(),
+            'basic_stats': self.data.describe().to_dict()
+        }
+        return stats
+    
+    def prepare_features(self, target_column: str):
+        """Prépare les features pour l'entraînement."""
+        # Supprimer les valeurs manquantes
+        clean_data = self.data.dropna()
+        
+        # Séparer les features et la target
+        X = clean_data.drop(target_column, axis=1)
+        y = clean_data[target_column]
+        
+        # Encoder les variables catégorielles si nécessaire
+        X = pd.get_dummies(X, drop_first=True)
+        
+        return train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    def train_model(self, X_train, y_train):
+        """Entraîne un modèle de régression linéaire."""
+        self.model = LinearRegression()
+        self.model.fit(X_train, y_train)
+        
+    def evaluate_model(self, X_test, y_test) -> dict:
+        """Évalue les performances du modèle."""
+        if self.model is None:
+            raise ValueError("Le modèle n'a pas été entraîné")
+            
+        predictions = self.model.predict(X_test)
+        
+        return {
+            'mse': mean_squared_error(y_test, predictions),
+            'r2_score': r2_score(y_test, predictions),
+            'predictions': predictions.tolist()
+        }
+    
+    def plot_results(self, y_test, predictions):
+        """Affiche un graphique des résultats."""
+        plt.figure(figsize=(10, 6))
+        plt.scatter(y_test, predictions, alpha=0.7)
+        plt.plot([y_test.min(), y_test.max()], 
+                [y_test.min(), y_test.max()], 'r--', lw=2)
+        plt.xlabel('Valeurs Réelles')
+        plt.ylabel('Prédictions')
+        plt.title('Prédictions vs Valeurs Réelles')
+        plt.show()
+
+# Exemple d'utilisation
+if __name__ == "__main__":
+    analyzer = DataAnalyzer('sales_data.csv')
+    
+    # Explorer les données
+    stats = analyzer.explore_data()
+    print(f"Dataset shape: {stats['shape']}")
+    
+    # Préparer et entraîner le modèle
+    X_train, X_test, y_train, y_test = analyzer.prepare_features('sales_amount')
+    analyzer.train_model(X_train, y_train)
+    
+    # Évaluer les performances
+    results = analyzer.evaluate_model(X_test, y_test)
+    print(f"R² Score: {results['r2_score']:.3f}")
+</code></pre>
+
+<h2>Chapitre 5 – JavaScript Moderne et Frameworks</h2>
+
+<img src="https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=400&h=250&fit=crop" alt="JavaScript development" class="image-left">
+
+<p>JavaScript a évolué pour devenir un langage polyvalent capable de gérer le front-end, le back-end et même les applications mobiles. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Proin eget tortor risus.</p>
+
+<div class="clear"></div>
+
+<pre><code class="language-javascript">/**
+ * Module de gestion d'utilisateurs avec des fonctionnalités modernes
+ */
+
+// Classe utilisateur avec des méthodes asynchrones
+class UserManager {
+    constructor(apiUrl) {
+        this.apiUrl = apiUrl;
+        this.cache = new Map();
+    }
+    
+    // Méthode asynchrone pour récupérer un utilisateur
+    async fetchUser(userId) {
+        // Vérifier le cache d'abord
+        if (this.cache.has(userId)) {
+            return this.cache.get(userId);
+        }
+        
+        try {
+            const response = await fetch(`${this.apiUrl}/users/${userId}`);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const user = await response.json();
+            this.cache.set(userId, user);
+            return user;
+            
+        } catch (error) {
+            console.error('Erreur lors de la récupération:', error);
+            throw error;
+        }
+    }
+    
+    // Utilisation des template literals et destructuring
+    async createUserCard(userId) {
+        try {
+            const user = await this.fetchUser(userId);
+            const { name, email, avatar, role } = user;
+            
+            return `
+                <div class="user-card" data-user-id="${userId}">
+                    <img src="${avatar}" alt="Avatar de ${name}">
+                    <h3>${name}</h3>
+                    <p class="email">${email}</p>
+                    <span class="role role-${role.toLowerCase()}">${role}</span>
+                </div>
+            `;
+        } catch (error) {
+            return '<div class="error">Erreur de chargement</div>';
+        }
+    }
+    
+    // Méthode avec gestion d'événements moderne
+    attachEventListeners() {
+        document.addEventListener('click', (event) => {
+            if (event.target.matches('.user-card')) {
+                this.handleUserClick(event.target);
+            }
+        });
+    }
+    
+    // Arrow function avec destructuring
+    handleUserClick = (cardElement) => {
+        const { userId } = cardElement.dataset;
+        this.showUserDetails(userId);
+    }
+    
+    // Utilisation de Promise.all pour les requêtes parallèles
+    async loadMultipleUsers(userIds) {
+        try {
+            const userPromises = userIds.map(id => this.fetchUser(id));
+            const users = await Promise.all(userPromises);
+            
+            return users.filter(user => user !== null);
+        } catch (error) {
+            console.error('Erreur lors du chargement multiple:', error);
+            return [];
+        }
+    }
+}
+
+// Utilisation avec les modules ES6
+export default UserManager;
+
+// Exemple d'utilisation dans une autre partie de l'application
+import UserManager from './UserManager.js';
+
+const userManager = new UserManager('https://api.exemple.com');
+
+// Fonction avec async/await
+async function initializeApp() {
+    try {
+        // Charger plusieurs utilisateurs en parallèle
+        const userIds = [1, 2, 3, 4, 5];
+        const users = await userManager.loadMultipleUsers(userIds);
+        
+        // Générer les cartes utilisateur
+        const cardPromises = users.map(user => 
+            userManager.createUserCard(user.id)
+        );
+        
+        const cards = await Promise.all(cardPromises);
+        
+        // Afficher dans le DOM
+        const container = document.getElementById('users-container');
+        container.innerHTML = cards.join('');
+        
+        // Attacher les événements
+        userManager.attachEventListeners();
+        
+    } catch (error) {
+        console.error('Erreur d\'initialisation:', error);
+    }
+}
+
+// Démarrer l'application quand le DOM est prêt
+document.addEventListener('DOMContentLoaded', initializeApp);</code></pre>
+
+<div class="highlight-box">
+    <h3>🚀 Technologies Modernes</h3>
+    <p>Ce livre couvre les technologies les plus récentes et les meilleures pratiques de développement. Chaque exemple est conçu pour être pratique et immédiatement utilisable dans vos projets.</p>
+</div>
+
+<h2>Conclusion</h2>
+
+<div class="two-columns">
+    <p><strong>L'évolution constante de la programmation</strong> nous enseigne que l'apprentissage est un processus continu. Les langages et technologies présentés dans ce guide ne sont qu'un aperçu de l'écosystème riche et diversifié du développement logiciel moderne.</p>
+    
+    <p><strong>La pratique avant tout</strong> : Aucune lecture, aussi complète soit-elle, ne peut remplacer l'expérience pratique. Chaque ligne de code écrite, chaque bug résolu, chaque projet réalisé contribue à forger votre expertise de développeur.</p>
+    
+    <p><strong>Communautés et collaboration</strong> : Le développement moderne est intrinsèquement collaboratif. Participez aux communautés open source, contribuez aux projets existants, et n'hésitez pas à partager vos propres créations.</p>
+    
+    <p><strong>Spécialisation et polyvalence</strong> : Bien qu'il soit important de maîtriser profondément certaines technologies, maintenir une curiosité pour les nouvelles approches et paradigmes vous permettra de rester pertinent dans ce domaine en évolution rapide.</p>
+</div>
+
+<h3>Conseils pour la Suite de votre Parcours</h3>
+
+<div class="two-columns">
+    <p><strong>Projets personnels</strong> : Créez des projets qui vous passionnent. Qu'il s'agisse d'une application mobile, d'un site web, ou d'un script d'automatisation, les projets personnels sont souvent les meilleurs terrains d'apprentissage.</p>
+    
+    <p><strong>Veille technologique</strong> : Suivez les blogs techniques, participez à des conférences, et restez informé des évolutions du secteur. La technologie évolue rapidement, et rester à jour fait partie intégrante du métier.</p>
+    
+    <p><strong>Mentorat</strong> : Cherchez des mentors expérimentés et, dès que possible, devenez mentor à votre tour. L'enseignement est l'une des meilleures façons de consolider ses connaissances.</p>
+    
+    <p><strong>Soft skills</strong> : Ne négligez pas les compétences non-techniques. Communication, gestion de projet, et travail en équipe sont tout aussi importants que la maîtrise technique pour réussir dans ce domaine.</p>
+</div>
+
+<div class="highlight-box">
+    <h3>🚀 Ressources pour Continuer</h3>
+    <div class="two-columns">
+        <p><strong>Documentation officielle</strong> : Toujours commencer par les docs officielles des technologies que vous apprenez. Elles sont généralement les plus à jour et complètes.</p>
+        
+        <p><strong>Plateformes d'apprentissage</strong> : Coursera, edX, Udacity, et Khan Academy proposent des cours de qualité sur tous les sujets abordés dans ce livre.</p>
+        
+        <p><strong>GitHub et GitLab</strong> : Explorez les projets open source, lisez du code de qualité, et contribuez quand vous le pouvez. C'est une excellente façon d'apprendre les bonnes pratiques.</p>
+        
+        <p><strong>Stack Overflow et communautés</strong> : N'hésitez pas à poser des questions et à aider les autres. L'entraide est au cœur de la communauté des développeurs.</p>
+    </div>
+</div>
+
+<div class="image-container">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=400&fit=crop" alt="Team collaboration">
+    <div class="image-caption">La programmation est un effort collaboratif</div>
+</div>
+
+<blockquote>
+    <p>«Le code est lu plus souvent qu'il n'est écrit. Assurez-vous qu'il raconte une belle histoire.» - Guido van Rossum</p>
+</blockquote>
+
+</body>
+</html>

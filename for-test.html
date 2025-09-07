@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprendre Kotlin - Guide Complet de Programmation</title>
+    
+
+   
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+ 
+    <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="default.min.css">
+    <script src="highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+  
+  </style>
+<body>
+
+
+<h1>Guide Complet de Programmation Moderne</h1>
+
+
+
+
+<div class="image-container">
+    <img src="cover.jpg" alt="Programming workspace">
+    <div class="image-caption">Un environnement de développement moderne</div>
+</div>
+
+<hr>
+
+<h2>Introduction à la Programmation</h2>
+
+<div class="two-columns">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    
+    <div class="column-break"></div>
+    
+    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</p>
+    
+    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+</div>
+
+<img src="images/pc.jpg" alt="Code on screen" class="image-right">
+
+<p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.</p>
+
+<p>Omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+
+<div class="clear"></div>
+
+<div class="highlight-box">
+    <h3>💡 Conseil Important</h3>
+    <p>La programmation est un art qui se maîtrise par la pratique. N'hésitez pas à expérimenter avec les exemples de code présentés dans ce livre. Chaque ligne de code écrite vous rapproche de la maîtrise.</p>
+</div>
+
+<h2>Chapitre 1 – Introduction à Kotlin</h2>
+
+<img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=400&h=250&fit=crop" alt="Kotlin programming" class="image-left">
+
+<p>Kotlin est un langage de programmation moderne développé par JetBrains. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
+
+<p>Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque.</p>
+
+<div class="clear"></div>
+
+<pre><code class="language-kotlin">/**
+ * Exemple de classe Kotlin avec des fonctionnalités modernes
+ */
+data class Person(val name: String, val age: Int) {
+    
+    fun greet(): String {
+        return "Bonjour, je m'appelle $name et j'ai $age ans."
+    }
+    
+    fun isAdult(): Boolean = age >= 18
+    
+    companion object {
+        fun createChild(name: String): Person {
+            return Person(name, 0)
+        }
+    }
+}
+
+fun main() {
+    val person = Person("Alice", 25)
+    println(person.greet())
+    
+    val child = Person.createChild("Bob")
+    println("${child.name} est ${if (child.isAdult()) "adulte" else "mineur"}")
+}</code></pre>
+
+<blockquote>
+    <p>«La simplicité est la sophistication suprême.» - Leonardo da Vinci</p>
+</blockquote>
+
+<h2>Chapitre 2 – Développement Web avec PHP</h2>
+
+<div class="two-columns">
+    <p>PHP reste l'un des langages les plus populaires pour le développement web. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+    
+    <p>Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+    
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+</div>
+
+<div class="image-container">
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=300&fit=crop" alt="PHP development">
+    <div class="image-caption">Développement PHP moderne avec frameworks</div>
+</div>
+
+<pre><code class="language-php"><?php
+/**
+ * Exemple de classe PHP avec des concepts modernes
+ */
+class DatabaseManager {
+    private PDO $connection;
+    private string $host;
+    
+    public function __construct(string $host, string $dbname) {
+        $this->host = $host;
+        $dsn = "mysql:host={$host};dbname={$dbname};charset=utf8mb4";
+        $this->connection = new PDO($dsn, $username, $password, [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        ]);
+    }
+    
+    public function findUserById(int $id): ?array {
+        $stmt = $this->connection->prepare("SELECT * FROM users WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        
+        return $stmt->fetch() ?: null;
+    }
+}
+
+// Utilisation
+$db = new DatabaseManager('localhost', 'myapp');
+$user = $db->findUserById(123);
+
+if ($user) {
+    echo "Utilisateur trouvé : {$user['name']}";
+} else {
+    echo "Utilisateur non trouvé";
+}
+?></code></pre>
+
+</body>
+</html>
