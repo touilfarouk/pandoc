@@ -48,11 +48,11 @@ pandoc for-test.html -o book.epub ^
   pandoc book.html \
   -o book.epub \
   --css=style.css \
-  --metadata title="Guide Complet de Programmation Moderne" \
-  --metadata author="Ton Nom" \
+   --css=style.css \
+  --css=default.min.css \
+  --css=bootstrap.min.css \
   --epub-cover-image=cover.jpg \
   --resource-path=.:fonts:images \
-  --toc --toc-depth=2 \
   --embed-resources --standalone \
   --highlight-style=pygments
 
