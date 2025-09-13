@@ -56,6 +56,18 @@ pandoc for-test.html -o book.epub ^
   --embed-resources --standalone \
   --highlight-style=pygments
 
+-------------------------ubuntu generate pdf----------------------
+sudo apt install wkhtmltopdf
+
+pandoc book.html \
+  -o book.pdf \
+  --css=style.css \
+  --css=default.min.css \
+  --css=bootstrap.min.css \
+  --resource-path=.:fonts:images \
+  --embed-resources --standalone \
+  --pdf-engine=wkhtmltopdf
+
 -------------------------------------------------------------------
 <style>
     
